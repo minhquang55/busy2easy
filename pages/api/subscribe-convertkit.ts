@@ -1,13 +1,19 @@
 import isValidEmail from 'utils/isValidEmail';
 
 const subscribeConvertkit = async (req, res) => {
-  const { email } = JSON.parse(req.body);
+  const { email_address, full_name, phone_number } = JSON.parse(req.body);
 
-  if (!email) {
+  if (!email_address) {
     return res.status(400).json({ error: 'Email is required.' });
   }
+  if (!full_name) {
+    return res.status(400).json({ error: 'Full name is required.' });
+  }
+  if (!phone_number) {
+    return res.status(400).json({ error: 'Phone number is required.' });
+  }
 
-  const isValid = isValidEmail(email);
+  const isValid = isValidEmail(email_address);
 
   if (!isValid) {
     return res.status(400).json({ error: 'Email is invalid.' });
@@ -20,7 +26,12 @@ const subscribeConvertkit = async (req, res) => {
     const response = await fetch(
       `https://api.convertkit.com/v3/forms/${FORM_ID}/subscribe`,
       {
-        body: JSON.stringify({ email, api_key: API_KEY }),
+        body: JSON.stringify({
+          email_address,
+          full_name,
+          phone_number,
+          api_key: API_KEY
+        }),
         headers: { 'Content-Type': 'application/json' },
         method: 'POST'
       }

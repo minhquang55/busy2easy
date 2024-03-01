@@ -23,9 +23,9 @@ export default function HeroHeader({ blog }: any) {
           {siteData?.headerDescription}
         </div>
 
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <SubscribeInput />
-        </div>
+        </div> */}
       </Container>
     </div>
   );

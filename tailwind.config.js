@@ -6,7 +6,11 @@ module.exports = {
     './lib/**/*.tsx'
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: {
+        'logo-banner': "url('/public/b2e-logo-navbar.jpg')",
+      }
+    }
   },
   plugins: [require('@tailwindcss/line-clamp')]
 };
