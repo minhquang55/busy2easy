@@ -1,6 +1,5 @@
 import siteData from 'siteData';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Socials() {
   const socials = [
