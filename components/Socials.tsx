@@ -1,17 +1,18 @@
 import siteData from 'siteData';
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Socials() {
   const socials = [
     {
-      name: 'Twitter',
-      href: siteData?.twitter,
-      icon: '/socials/twitter.svg'
+      name: 'Facebook',
+      href: siteData?.facebook,
+      icon: '/socials/facebook.svg'
     },
     {
-      name: 'GitHub',
-      href: siteData?.github,
-      icon: '/socials/github.svg'
+      name: 'Tiktok',
+      href: siteData?.tiktok,
+      icon: '/socials/tiktok.svg'
     },
     {
       name: 'LinkedIn',

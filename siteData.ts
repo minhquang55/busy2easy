@@ -8,10 +8,10 @@ const siteData = {
   language: 'en-us',
   locale: 'en-US',
   ogBanner: '/b2e-logo.jpg',
-  github: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter',
-  twitter: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter',
+  tiktok: 'https://www.facebook.com/busytoeasy2101',
+  facebook: 'https://www.facebook.com/busytoeasy2101',
   websiteUrl: 'https://nextjs-notion-blog-starter.vercel.app',
-  linkedin: 'https://github.com/tuanphungcz/nextjs-notion-blog-starter'
+  linkedin: 'https://www.facebook.com/busytoeasy2101'
 };
 
 export default siteData;
